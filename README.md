@@ -5,7 +5,7 @@ Make sure **gpg** and **curl** is installed in your system before attempting any
 
 ## To import all my ssh keys
 ```shell
-curl -sSL https://raw.githubusercontent.com/frankper/public-keys/master/authorized_keys >> ~/.ssh/authorized_keys
+curl -sSL https://gitlab.com/frankper/public-keys/-/blob/master/authorized_keys >> ~/.ssh/authorized_keys
 ```
 ## To import all my gpg keys
 
@@ -21,15 +21,15 @@ curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1e81e951285219
 # gpg card 003.v2-v3
 curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ebbdb2a2fe0dc7d | gpg --import -
 ```
-### From my github repo
+### From my gitlab repo
 ```shell
 # yubikey 
-curl -sSL https://raw.githubusercontent.com/frankper/public-keys/master/frank.perrakis.yubikey.asc | gpg --import -
+curl -sSL https://gitlab.com/frankper/public-keys/-/blob/master/frank.perrakis.yubikey.asc  | gpg --import -
 # gpg card 001 
-curl -sSL https://raw.githubusercontent.com/frankper/public-keys/master/frank.perrakis.gpg001.asc | gpg --import -
+curl -sSL https://gitlab.com/frankper/public-keys/-/blob/master/frank.perrakis.gpg001.asc | gpg --import -
 # gpg card 002 
-curl -sSL https://raw.githubusercontent.com/frankper/public-keys/master/frank.perrakis.gpg002.asc | gpg --import -
+curl -sSL https://gitlab.com/frankper/public-keys/-/blob/master/frank.perrakis.gpg002.asc | gpg --import -
 # gpg card 003 
-curl -sSL https://raw.githubusercontent.com/frankper/public-keys/master/frank.perrakis.gpg003.v2-v3.asc | gpg --import -
+curl -sSL https://gitlab.com/frankper/public-keys/-/blob/master/frank.perrakis.gpg003.v2-v3.asc | gpg --import -
 ```
 
