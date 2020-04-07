@@ -3,14 +3,17 @@ My public ssh and gpg keys
 
 Make sure **gpg** and **curl** is installed in your system before attempting any of the following 
 
-## To import all my ssh keys
+## To import all my ssh and gpg keys
+Fetch and run the script 
+```shell
+sh -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)"
+```
+## To import only my ssh keys
 ```shell
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >> ~/.ssh/authorized_keys
 ```
-## To import all my gpg keys
-
+## To import only my gpg keys
 ### From Ubuntu GPG keyserver
-
 ```shell
 # yubikey
 curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa59e931a849979fc | gpg --import -
