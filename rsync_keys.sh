@@ -19,10 +19,8 @@ colorprintf () {
 DeleteRun () {
     for folder in ${TargetFolderForDeletion[@]};do
         for file in ${FilesForDeletion[@]};do
-            colorprintf red "Deleting ${file} in ${folder}"
             rm ${folder}/${file}
             colorprintf orange "Deleted ${file} in ${folder}"
-            colorprintf cyan "Copy new ${file} in ${folder}"
             cp $source_folder/${file} ${folder}/
             colorprintf green "Copied new ${file} in ${folder}"
         done
