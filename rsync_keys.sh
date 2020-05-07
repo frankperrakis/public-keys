@@ -41,13 +41,19 @@ SetTime (){
 start_time=$(date +%s.%N)
 current_time=$(date +'%T-%d/%m/%Y')
 }
-GitCommit (){
+GitCommitGithub (){
 cd $TargetFolderForDeletion
 git add . 
 git commit -m "Automated Sync ${current_time}"
 git push 
 }
 
+GitCommitGitlab (){
+cd $source_folder
+git add . 
+git commit -m "Automated Sync ${current_time}"
+git push 
+}
 
 SetTime
 # set local location
@@ -67,6 +73,7 @@ declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-github)
 declare -a FilesForDeletion=(rsync_keys.sh authorized_keys install_frank.sh README.md gpg-keys-urls)
 
 DeleteRun
-GitCommit
+GitCommitGithub
+GitCommitGitlab
 ExitMessage
 
