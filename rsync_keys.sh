@@ -72,9 +72,7 @@ colorprintf purple "Source of trust is $source_folder"
 # define folder targets for deletion 
 declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-github)
 # define files for deletion 
-declare -a FilesForDeletion=(rsync_keys.sh authorized_keys install_frank.sh README.md gpg-keys-urls)
-array=${ls -d */}
-echo $array
+declare -a FilesForDeletion=( $( ls . ) )
 
 DeleteRun
 GitCommitGithub
