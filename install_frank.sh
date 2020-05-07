@@ -23,7 +23,7 @@ colorprintf orange "Running $pick_name"
 colorprintf red "Installing SSH Auth Keys"
 # ssh auth keys 
 touch $HOME/.ssh/authorized_keys
-colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh key")"
+colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh-rsa" -B 1 | grep -vE 'ssh-rsa|^--$')"
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >> $HOME/.ssh/authorized_keys
 
 colorprintf red "Installing All GPG Keys"
