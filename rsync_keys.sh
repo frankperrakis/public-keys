@@ -41,6 +41,7 @@ SetTime (){
 start_time=$(date +%s.%N)
 current_time=$(date +'%T-%d/%m/%Y')
 }
+
 GitCommitGithub (){
 cd $TargetFolderForDeletion
 git add . 
@@ -72,7 +73,7 @@ colorprintf purple "Source of trust is $source_folder"
 # define folder targets for deletion 
 declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-github)
 # define files for deletion 
-declare -a FilesForDeletion=( $( ls . ) )
+declare -a FilesForDeletion=( $( ls ${source_folder} ) )
 
 DeleteRun
 GitCommitGithub
