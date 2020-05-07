@@ -46,6 +46,7 @@ cd $TargetFolderForDeletion
 git add . 
 git commit -m "Automated Sync ${current_time}"
 git push 
+colorprintf green "Commited to Github"
 }
 
 GitCommitGitlab (){
@@ -53,6 +54,7 @@ cd $source_folder
 git add . 
 git commit -m "Automated Sync ${current_time}"
 git push 
+colorprintf green "Commited to Gitlab"
 }
 
 SetTime
@@ -71,6 +73,8 @@ colorprintf purple "Source of trust is $source_folder"
 declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-github)
 # define files for deletion 
 declare -a FilesForDeletion=(rsync_keys.sh authorized_keys install_frank.sh README.md gpg-keys-urls)
+array=${ls -d */}
+echo $array
 
 DeleteRun
 GitCommitGithub
