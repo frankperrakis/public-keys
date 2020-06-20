@@ -16,6 +16,15 @@ colorprintf () {
     echo "$2";
     tput sgr0
 }
+# check curl,gpg exist 
+if ! type "gpg" > /dev/null; then
+  colorprintf red "gpg does not exist in your system ,script will now exit"
+  exit 0 
+fi
+if ! type "curl" > /dev/null; then
+  colorprintf red "curl does not exist in your system ,script will now exit"
+  exit 0 
+fi
 # set script name below 
 pick_name="Install Franks ssh/gpg keys"
 colorprintf orange "Running $pick_name"
