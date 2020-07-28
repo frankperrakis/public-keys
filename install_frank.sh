@@ -18,20 +18,17 @@ colorprintf () {
 }
 
 check_dependencies () {
-  # check curl,gpg exist 
-if ! type "gpg" > /dev/null; then
-  colorprintf red "gpg does not exist in your system ,script will now exit"
-  exit 0 
-fi
-if ! type "curl" > /dev/null; then
-  colorprintf red "curl does not exist in your system ,script will now exit"
-  exit 0 
-fi
+colorprintf red "Checking Dependencies"
+for dep in ${dependencies[@]}; do 
+  if ! type "${dep}" > /dev/null; then
+    colorprintf red "${dep} does not exist in your system ,script will now exit"
+    exit 0 
+  fi 
+done
 }
 
 ssh_auth_keys () {
 colorprintf red "Installing SSH Auth Keys"
-# ssh auth keys 
 touch $HOME/.ssh/authorized_keys
 colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh-rsa" -B 1 | grep -vE 'ssh-rsa|^--$')"
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >> $HOME/.ssh/authorized_keys
@@ -47,11 +44,11 @@ done
 # set script name below 
 pick_name="Install Franks ssh/gpg keys"
 colorprintf orange "Running $pick_name"
+# declare dependencies
+declare -a dependencies=(curl wget gpg)
 # declare gpg key names
 declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
-
 check_dependencies
 ssh_auth_keys
 gpg_keys
-
 colorprintf green "$pick_name Done"
