@@ -48,7 +48,9 @@ colorprintf orange "Running $pick_name"
 declare -a dependencies=(curl wget gpg)
 # declare gpg key names
 declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
+
 check_dependencies
 ssh_auth_keys
 gpg_keys
+
 colorprintf green "$pick_name Done"
