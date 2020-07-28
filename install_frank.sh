@@ -16,7 +16,9 @@ colorprintf () {
     echo "$2";
     tput sgr0
 }
-# check curl,gpg exist 
+
+check_dependencies () {
+  # check curl,gpg exist 
 if ! type "gpg" > /dev/null; then
   colorprintf red "gpg does not exist in your system ,script will now exit"
   exit 0 
@@ -25,23 +27,31 @@ if ! type "curl" > /dev/null; then
   colorprintf red "curl does not exist in your system ,script will now exit"
   exit 0 
 fi
-# set script name below 
-pick_name="Install Franks ssh/gpg keys"
-colorprintf orange "Running $pick_name"
+}
 
+ssh_auth_keys () {
 colorprintf red "Installing SSH Auth Keys"
 # ssh auth keys 
 touch $HOME/.ssh/authorized_keys
 colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh-rsa" -B 1 | grep -vE 'ssh-rsa|^--$')"
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >> $HOME/.ssh/authorized_keys
+}
 
+gpg_keys () {
 colorprintf red "Installing All GPG Keys"
-curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.yubikey.asc  | gpg --import - 
-# gpg card 001 
-curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gpg001.asc | gpg --import - 
-# gpg card 002 
-curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gpg002.asc | gpg --import - 
-# gpg card 003 
-curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gpg003.v2-v3.asc | gpg --import - 
+for key in ${gpgKeyNames[@]}; do 
+  curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.${key}.asc | gpg --import - 
+done 
+}
+
+# set script name below 
+pick_name="Install Franks ssh/gpg keys"
+colorprintf orange "Running $pick_name"
+# declare gpg key names
+declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
+
+check_dependencies
+ssh_auth_keys
+gpg_keys
 
 colorprintf green "$pick_name Done"
