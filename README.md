@@ -1,10 +1,15 @@
-* [public-keys](#public-keys)
-    * [To import all my ssh and gpg keys](#to-import-all-my-ssh-and-gpg-keys)
-    * [To import only my ssh keys](#to-import-only-my-ssh-keys)
-    * [To import only my gpg keys](#to-import-only-my-gpg-keys)
-        * [From Ubuntu GPG keyserver](#from-ubuntu-gpg-keyserver)
-        * [From my gitlab repo](#from-my-gitlab-repo)
+Table of Contents
+=================
 
+   * [public-keys](#public-keys)
+      * [To import all my ssh and gpg keys](#to-import-all-my-ssh-and-gpg-keys)
+      * [To import only my ssh keys](#to-import-only-my-ssh-keys)
+      * [To import only my gpg keys](#to-import-only-my-gpg-keys)
+         * [From Ubuntu GPG keyserver](#from-ubuntu-gpg-keyserver)
+         * [From my gitlab repo](#from-my-gitlab-repo)
+   * [repo tree](#repo-tree)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 # public-keys
 My public ssh and gpg keys 
 
@@ -41,4 +46,18 @@ curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gp
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gpg002.asc | gpg --import -
 # gpg card 003 
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.gpg003.v2-v3.asc | gpg --import -
+```
+# repo tree
+```shell
+0 directories, 9 files
+.
+├── authorized_keys
+├── frank.perrakis.gpg001.asc
+├── frank.perrakis.gpg002.asc
+├── frank.perrakis.gpg003.v2-v3.asc
+├── frank.perrakis.yubikey.asc
+├── gpg-keys-urls
+├── install_frank.sh
+├── README.md
+└── rsync_keys.sh
 ```
