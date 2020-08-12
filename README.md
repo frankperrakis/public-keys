@@ -1,3 +1,10 @@
+* [public-keys](#public-keys)
+    * [To import all my ssh and gpg keys](#to-import-all-my-ssh-and-gpg-keys)
+    * [To import only my ssh keys](#to-import-only-my-ssh-keys)
+    * [To import only my gpg keys](#to-import-only-my-gpg-keys)
+        * [From Ubuntu GPG keyserver](#from-ubuntu-gpg-keyserver)
+        * [From my gitlab repo](#from-my-gitlab-repo)
+
 # public-keys
 My public ssh and gpg keys 
 
