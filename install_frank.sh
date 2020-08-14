@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 # Script to install all of Frank's ssh and gpg keys 
 # tested in Ubuntu 20.04 ,fedora 31, wsl2
 
