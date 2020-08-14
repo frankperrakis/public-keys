@@ -18,7 +18,7 @@ Make sure **gpg** and **curl** is installed in your system before attempting any
 ## To import all my ssh and gpg keys
 Fetch and run the script 
 ```shell
-sh -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)"
+bash -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)"
 ```
 ## To import only my ssh keys
 ```shell
