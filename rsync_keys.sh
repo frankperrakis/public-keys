@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# sync backup scripts in repo
+# sync gpg and ssh keys between repos
 # tested in Ubuntu 20.04 ,fedora 31
 colorprintf () {
     case $1 in
