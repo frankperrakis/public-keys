@@ -60,7 +60,7 @@ SetTime
 # set local location
 local_location="$(echo $(pwd))"
 # set script name below
-pick_name="Sync Public Keys Script"
+pick_name="Sync Public gpg/ssh Keys Script"
 colorprintf green "Running $pick_name"
 # unset variables
 unset TargetFolderForDeletion

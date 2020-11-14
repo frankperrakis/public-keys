@@ -43,7 +43,7 @@ done
 }
 
 # set script name below 
-pick_name="Install Franks ssh/gpg keys"
+pick_name="Script to install Frank's ssh/gpg keys"
 colorprintf orange "Running $pick_name"
 # declare dependencies
 declare -a dependencies=(curl wget gpg)
