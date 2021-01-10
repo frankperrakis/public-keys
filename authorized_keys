@@ -20,8 +20,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCttz8EVs73YEg48J3MAepNQbu4buveFuTWW8thXSwM
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFP2v2eeSYRDhWcaPoCP8S/YF8MLC+qUl8/3LctlLYHh frank.perrakis@iotics.com
 # personal 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK2WmUeFGVWzB371s4FcS/IEZmcXmzs3gipXw4yJaOV8 frank.perrakis@gmail.com
-
-# x390 D10 frankper github
+#frankper github
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGX8PanEMuvqSA1UwAFI/Dce99BLTCShndhGg0a60grz github frankper
 
 # srv-uk-003 ssh key 
