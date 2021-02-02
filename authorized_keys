@@ -1,4 +1,5 @@
 ### Laptop/Desktop ###
+# for ssh access please add all the main keys below
 
 # main 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK2WmUeFGVWzB371s4FcS/IEZmcXmzs3gipXw4yJaOV8 
@@ -12,6 +13,7 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFP2v2eeSYRDhWcaPoCP8S/YF8MLC+qUl8/3LctlLYHh
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILXnhj3EwQD/e5drIQX+knFPaYWimvCgG02Tfc5RMF1q
 
 ### Yubikeys/GPG-Cards ###
+# for ssh access please add all the keys below
 
 # yubikey ssh key
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCTzgHzOfYY5ShcuCsRPhW3dVAznMIOKYweFhquC2wDCh+Ea9OKubZDjVJgK+yLJoULlLZnZgKSfGPpUAcLUece08dESeVca+CkunrzJnimlOt3xw7Hpzfp4ovWlq1RXOWoWP17k1BouwSRrujp1iTxYZibtypccVpSwFqOjc8DGyXqemUW2EPJ4zAGIFghWa/o42MIzDcmHyyXAhAR756cmBUz11lbT3/CjeAve5BiWDRIRbMccmrQjI742OP2n6FvtixpiLdHDge6TD7IvZfaU/of8a9Sal2Zwk4ATbQoub2dXSrHzIpPbQ6rOefbwZDgbT73LSiJyHKTFw/A7tN1 cardno:000605311329
