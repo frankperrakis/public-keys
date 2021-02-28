@@ -54,8 +54,26 @@ declare -a dependencies=(curl wget gpg)
 # declare gpg key names
 declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
 
-check_dependencies
-ssh_auth_keys
-gpg_keys
-
+while [ ! $# -eq 0 ]
+do
+	case "$1" in
+		--ssh | -s)
+      check_dependencies
+      ssh_auth_keys
+			exit
+			;;
+		--gpg | -g)
+      check_dependencies
+      gpg_keys
+			exit
+			;;
+    	---all | -a)
+      check_dependencies
+      ssh_auth_keys
+      gpg_keys
+			exit
+			;;
+	esac
+	shift
+done
 colorprintf green "$pick_name Done"
