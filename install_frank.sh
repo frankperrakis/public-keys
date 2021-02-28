@@ -52,6 +52,19 @@ for ubuntu in ${gpgKeyUbuntu[@]}; do
   curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=${ubuntu} | gpg --import -
 done 
 }
+
+display_help() {
+    echo "Usage: $0 [option...] " >&2
+    echo
+    echo "   -a, --all        install all gpp and ssh keys "
+    echo "   -s, --ssh        install only ssh keys "
+    echo "   -g, --gpg        install only gpg keys from gitlab repo "
+    echo "   -u, --ubuntu     Install only gpg keys from keyservers "
+    echo
+    # echo some stuff here for the -a or --add-options 
+    exit 1
+}
+
 # set script name below 
 pick_name="Script to install Frank's ssh/gpg keys"
 colorprintf orange "Running $pick_name"
@@ -68,24 +81,28 @@ do
 		--ssh | -s)
       check_dependencies
       ssh_auth_keys
-			exit
-			;;
+      exit
+      ;;
 		--gpg | -g)
       check_dependencies
       gpg_keys
-			exit
-			;;
-    	---all | -a)
+      exit
+      ;;
+    --all | -a)
       check_dependencies
       ssh_auth_keys
       gpg_keys
-			exit
-      ---ubuntu | -u)
+      exit
+      ;;
+    --ubuntu | -u)
       check_dependencies
-      ssh_auth_keys
-      gpg_keys
-			exit
-			;;
+      gpg_keys_ubuntu
+      exit
+      ;;
+    --help | -h)
+      display_help
+      exit
+      ;;
 	esac
 	shift
 done
