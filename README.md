@@ -18,28 +18,20 @@ Make sure **gpg** and **curl** is installed in your system before attempting any
 ## To import all my ssh and gpg keys
 Fetch and run the script 
 ```shell
-curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -a
-
+bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh) -a
 ```
 ## To import only my ssh keys
 ```shell
-curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -s
+bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh) -s 
 ```
 ## To import only my gpg keys
 ### From Ubuntu GPG keyserver
 ```shell
-# yubikey
-curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa59e931a849979fc | gpg --import -
-# gpg card 001 
-curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x5faddad63d31b26a | gpg --import -
-# gpg card 002
-curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1e81e951285219b0 | gpg --import -
-# gpg card 003.v2-v3
-curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ebbdb2a2fe0dc7d | gpg --import -
+bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh) -u
 ```
 ### From my gitlab repo
 ```shell
-curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -g
+bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh) -g
 ```
 # repo tree
 ```shell
