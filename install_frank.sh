@@ -46,6 +46,12 @@ for key in ${gpgKeyNames[@]}; do
 done 
 }
 
+gpg_keys_ubuntu () {
+colorprintf red "Installing All GPG Keys"
+for ubuntu in ${gpgKeyUbuntu[@]}; do 
+  curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=${ubuntu} | gpg --import -
+done 
+}
 # set script name below 
 pick_name="Script to install Frank's ssh/gpg keys"
 colorprintf orange "Running $pick_name"
@@ -53,6 +59,8 @@ colorprintf orange "Running $pick_name"
 declare -a dependencies=(curl wget gpg)
 # declare gpg key names
 declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
+# declare gpg key names from ubuntu servers
+declare -a gpgKeyUbuntu=(0x1e81e951285219b0 0x5faddad63d31b26a 0x1e81e951285219b0 0x1ebbdb2a2fe0dc7d)
 
 while [ ! $# -eq 0 ]
 do
@@ -68,6 +76,11 @@ do
 			exit
 			;;
     	---all | -a)
+      check_dependencies
+      ssh_auth_keys
+      gpg_keys
+			exit
+      ---ubuntu | -u)
       check_dependencies
       ssh_auth_keys
       gpg_keys
