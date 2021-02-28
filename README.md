@@ -18,11 +18,12 @@ Make sure **gpg** and **curl** is installed in your system before attempting any
 ## To import all my ssh and gpg keys
 Fetch and run the script 
 ```shell
-bash -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)" -a
+curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -a
+
 ```
 ## To import only my ssh keys
 ```shell
-bash -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)" -s
+curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -s
 ```
 ## To import only my gpg keys
 ### From Ubuntu GPG keyserver
@@ -38,7 +39,7 @@ curl -sSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ebbdb2a2fe0dc
 ```
 ### From my gitlab repo
 ```shell
-bash -c "$(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh)" -g
+curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_frank.sh | bash -s -- -g
 ```
 # repo tree
 ```shell
