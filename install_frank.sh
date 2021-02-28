@@ -77,13 +77,13 @@ declare -a gpgKeyUbuntu=(0x1e81e951285219b0 0x5faddad63d31b26a 0x1e81e951285219b
 
 while [ ! $# -eq 0 ]
 do
-	case "$1" in
-		--ssh | -s)
+  case "$1" in
+    --ssh | -s)
       check_dependencies
       ssh_auth_keys
       exit
       ;;
-		--gpg | -g)
+    --gpg | -g)
       check_dependencies
       gpg_keys
       exit
@@ -103,7 +103,7 @@ do
       display_help
       exit
       ;;
-	esac
-	shift
+  esac
+shift
 done
 colorprintf green "$pick_name Done"
