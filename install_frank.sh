@@ -35,6 +35,7 @@ mkdir -p $HOME/.ssh
 # touch the key file
 touch $HOME/.ssh/authorized_keys
 # append keys
+colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh-ed25519" -B 1 | grep -vE 'ssh-ed25519|^--$')"
 colorprintf white "$(curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys | xargs -0 echo | grep -i "ssh-rsa" -B 1 | grep -vE 'ssh-rsa|^--$')"
 curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >> $HOME/.ssh/authorized_keys
 }
