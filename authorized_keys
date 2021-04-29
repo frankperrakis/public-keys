@@ -25,6 +25,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBiO6pAuqIF5JyhlCQ4lutPJy+rCthCRifBa29qzXH
 
 ### Various ###
 
+# darth wsl debian w10
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP25q34YfiEzOaN8vyJYOKgGGGowmd4L6RRvCpnkSSjg
 # darth wsl 20.04 w10 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMcbLo5x/kAu7qKp6GYoeINokIGD4zUTqCE/67EW89D
 # jango wsl 20.04 w10 dev 
