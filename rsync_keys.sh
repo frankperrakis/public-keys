@@ -19,7 +19,7 @@ colorprintf () {
 DeleteRun () {
     for folder in ${TargetFolderForDeletion[@]};do
         for file in ${FilesForDeletion[@]};do
-            rm ${folder}/${file}
+            rm -rf ${folder}/${file}
             colorprintf orange "Deleted ${file} in ${folder}"
             cp $source_folder/${file} ${folder}/
             colorprintf green "Copied new ${file} in ${folder}"
