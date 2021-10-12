@@ -47,16 +47,16 @@ bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_f
 ```shell
 2 directories, 10 files
 .
-├── authorized_keys
-├── gpg-keys-urls
-├── install_frank.sh
-├── keyfiles
-│   └── frank.perrakis.main.asc
-├── README.md
 ├── revoced_keyfiles
 │   ├── frank.perrakis.gpg001.asc
 │   ├── frank.perrakis.gpg002.asc
 │   ├── frank.perrakis.gpg003.v2-v3.asc
 │   └── frank.perrakis.yubikey.asc
-└── rsync_keys.sh
+├── keyfiles
+│   └── frank.perrakis.main.asc
+├── install_frank.sh
+├── gpg-keys-urls
+├── authorized_keys
+├── rsync_keys.sh
+└── README.md
 ```
