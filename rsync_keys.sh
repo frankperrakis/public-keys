@@ -65,10 +65,8 @@ unset FilesForDeletion
 # define main source of truth 
 source_folder="~/projects/personal/public-keys"
 colorprintf purple "Source of trust is $source_folder"
-# define folder targets for deletion 
+# define folder targets for replication 
 declare -a TargetFolderForDeletion=("~/projects/personal/public-keys-frankperrakis/" "~/projects/personal/public-keys-frankper/")
-# define files for deletion 
-declare -a FilesForDeletion=( $( ls ${source_folder} ) )
 
 SyncRun
 GitCommitGithub
