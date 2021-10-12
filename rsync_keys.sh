@@ -66,7 +66,7 @@ unset FilesForDeletion
 source_folder="~/projects/personal/public-keys"
 colorprintf purple "Source of trust is $source_folder"
 # define folder targets for deletion 
-declare -a TargetFolderForDeletion=("~/projects/personal/public-keys-frankperrakis" "~/projects/personal/public-keys-frankper")
+declare -a TargetFolderForDeletion=("~/projects/personal/public-keys-frankperrakis/" "~/projects/personal/public-keys-frankper/")
 # define files for deletion 
 declare -a FilesForDeletion=( $( ls ${source_folder} ) )
 
