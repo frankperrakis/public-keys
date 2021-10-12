@@ -43,7 +43,7 @@ curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/authorized_keys >
 gpg_keys () {
 colorprintf red "Installing All GPG Keys"
 for key in ${gpgKeyNames[@]}; do 
-  curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/frank.perrakis.${key}.asc | gpg --import - 
+  curl -sSL https://gitlab.com/frankper/public-keys/-/raw/master/keyfiles/frank.perrakis.${key}.asc | gpg --import - 
 done 
 }
 
@@ -72,9 +72,13 @@ colorprintf orange "Running $pick_name"
 # declare dependencies
 declare -a dependencies=(curl wget gpg)
 # declare gpg key names
-declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
+declare -a gpgKeyNames=(main)
+# revoked 
+# declare -a gpgKeyNames=(gpg001 gpg002 yubikey gpg003.v2-v3)
 # declare gpg key names from ubuntu servers
-declare -a gpgKeyUbuntu=(0x1e81e951285219b0 0x5faddad63d31b26a 0x1e81e951285219b0 0x1ebbdb2a2fe0dc7d)
+declare -a gpgKeyUbuntu=(0x026df53d6b7c0b00732d555cf8e3ef51cf4f4f51)
+# revoced keys 
+# declare -a gpgKeyUbuntu=(0x1e81e951285219b0 0x5faddad63d31b26a 0x1e81e951285219b0 0x1ebbdb2a2fe0dc7d)
 
 while [ ! $# -eq 0 ]
 do
