@@ -70,7 +70,7 @@ declare -a TargetFolderForDeletion=("~/projects/personal/public-keys-frankperrak
 # define files for deletion 
 declare -a FilesForDeletion=( $( ls ${source_folder} ) )
 
-DeleteRun
+SyncRun
 GitCommitGithub
 GitCommitGitlab
 ExitMessage
