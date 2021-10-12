@@ -41,11 +41,13 @@ current_time=$(date +'%T-%d/%m/%Y')
 }
 
 GitCommitGithub (){
-cd $TargetFolderForDeletion
-git add . 
-git commit -m "Automated Sync ${current_time}"
-git push 
-colorprintf green "Commited to Github"
+for tar in $TargetFolderForDeletion; do 
+    cd $tar
+    git add . 
+    git commit -m "Automated Sync ${current_time}"
+    git push 
+    colorprintf green "Commited to Github"
+done
 }
 
 GitCommitGitlab (){
@@ -69,7 +71,7 @@ unset FilesForDeletion
 source_folder=~/projects/personal/public-keys
 colorprintf purple "Source of trust is $source_folder"
 # define folder targets for deletion 
-declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-github)
+declare -a TargetFolderForDeletion=(~/projects/personal/public-keys-frankperrakis ~/projects/personal/public-keys-frankper)
 # define files for deletion 
 declare -a FilesForDeletion=( $( ls ${source_folder} ) )
 
