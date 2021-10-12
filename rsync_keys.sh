@@ -63,7 +63,7 @@ colorprintf green "Running $pick_name"
 unset TargetFolderForDeletion
 unset FilesForDeletion
 # define main source of truth 
-source_folder=~/projects/personal/public-keys
+source_folder="~/projects/personal/public-keys"
 colorprintf purple "Source of trust is $source_folder"
 # define folder targets for deletion 
 declare -a TargetFolderForDeletion=("~/projects/personal/public-keys-frankperrakis" "~/projects/personal/public-keys-frankper")
