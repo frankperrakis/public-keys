@@ -18,7 +18,7 @@ colorprintf () {
 
 SyncRun () {
     for folder in ${TargetFolderForDeletion[@]};do
-        sudo rsync -xavh --exclude .git --delete-before $source_folder* $folder
+        sudo rsync -xavh --exclude .git --delete-before $source_folder/* $folder
     done
 }
 
