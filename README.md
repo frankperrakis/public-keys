@@ -45,14 +45,18 @@ bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/master/install_f
 * [gpg card 003.v2-v3](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ebbdb2a2fe0dc7d)
 # repo tree
 ```shell
-0 directories, 8 files
+2 directories, 10 files
 .
 ├── authorized_keys
-├── frank.perrakis.gpg001.asc
-├── frank.perrakis.gpg002.asc
-├── frank.perrakis.gpg003.v2-v3.asc
-├── frank.perrakis.yubikey.asc
+├── gpg-keys-urls
 ├── install_frank.sh
+├── keyfiles
+│   └── frank.perrakis.main.asc
 ├── README.md
+├── revoced_keyfiles
+│   ├── frank.perrakis.gpg001.asc
+│   ├── frank.perrakis.gpg002.asc
+│   ├── frank.perrakis.gpg003.v2-v3.asc
+│   └── frank.perrakis.yubikey.asc
 └── rsync_keys.sh
 ```
