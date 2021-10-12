@@ -16,14 +16,9 @@ colorprintf () {
     tput sgr0
 }
 
-DeleteRun () {
+SyncRun () {
     for folder in ${TargetFolderForDeletion[@]};do
-        for file in ${FilesForDeletion[@]};do
-            rm -rf ${folder}/${file}
-            colorprintf orange "Deleted ${file} in ${folder}"
-            cp $source_folder/${file} ${folder}/
-            colorprintf green "Copied new ${file} in ${folder}"
-        done
+        sudo rsync -xavh --exclude .git $source_folder $folder 
     done
 }
 
