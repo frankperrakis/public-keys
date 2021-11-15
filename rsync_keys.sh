@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # sync gpg and ssh keys between repos
-# tested in Ubuntu 20.04 ,fedora 31
+# tested in Ubuntu 20.04 ,fedora 35 , Debian 12
 colorprintf () {
     case $1 in
         "red") tput setaf 1;;
