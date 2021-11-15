@@ -1,4 +1,4 @@
-### Laptop/Desktop ###
+### Laptop/Desktop/Servers ###
 # for ssh access please add all the main keys below
 # main 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOGFXgmGussLRLpvjQwpnZD40OWjfda1hfe3TpqHsrgM
@@ -12,22 +12,25 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII7ZBujTdP3GQky0qKkXgoBoyvAcxS0sNgY3+vbzs2OW
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJQROs9m0eRRGoiisCP552g9vjBrt5Nw3FNNKBYNqCJ7 weaveworks
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFP2v2eeSYRDhWcaPoCP8S/YF8MLC+qUl8/3LctlLYHh iotics
 
-### Servers ###
+# servers
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIft/xVWI5ywnDZSxIZ5ceAkfrITJxolCMkKqYPuUAuX srv-uk-003
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMGYop+zXJRa7Ysw0Qqoov6xXkuRYO+uu+iG1Tt5xqVe dev001
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTyOCuP6+f4ZEEEVRYMrWxSPYqpuu4yzuEMoDQ2QaWe srv-gr-004
 
 ### Yubikeys/GPG-Cards ###
 # (Optional)for ssh access please add all the keys below
+# gpg-key-main
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDH2OTj6tomKgNXT8kyubEkt6SmNhy5C8j7iwQmWw0GGxAMT6om+hrvp3C70KZS2zROesI3kzQloC5zM2bDuF57CaXri48vpn3aL3A2URuFXFhEJkoWgVoquZF9xKydmCOm/eTPaBF2+TNrJ+0m2VQoAsgdBcEiq+Pt2FmiG1igjJFluPJIDemvDWvV0wWD9GiW/uUflc7AsZN81A0KGEHaBBIxmdTlI58nFxGSQITzeQQWc5U7HAUAScCvEB0NOWs4vVOJU1GG1giLEG+1nup3fvdWtVffsnWxdSWdNa+FDsSetmN8rB3JoEDN7wDOBZTwsp2EOHTafWzRDsTkFEi/Lpvp/O5lcykmrXDOifbJYDLV8DNkut+XlBMtnOicpipD7ZeIgqNXvG7+Ai/Y4N5OzHdRbimtLgrpGWiy7AbXOhHX+0Nepdm1TXYm+9yHSEvk+gpcNqQ2bsNktdGTWItSWpBamWxw3JCYrQ+T3+PqojrcsBqTpj4N/wkqwrZNujZtBkrzQQNJDzE0rQV/dN7u/3MH8PxqzVOojzVKSEX45I8FEzKGLlui0uolzY6gbs4z17UBw4yLg68+txBYQgzIWPtkxFX4xLfT2GM1aRLozGaJzOCQqy529hD49ML8x4Cx6ZcT5s3CKxMMon/9tFxBxLjJkblhutMgQpb+zBeDXw== openpgp:0x78765BB2
 
 ### Various ###
-# srv-uk-003 ssh key 
-
 # juicy ssh client
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDFZmI1OFyFXfFI/aQQmJF9g/TqkntoHS+53kF1z8jNA9gfGMAiL2YFrDwTXVN8lOo7wfkSjE+6nEUPZWe8HApPpeqWAgkwZN05wdQNlGZ3LMx5lwhfkkR6jqYlUcHBQb77rahjh7uun4kBNd4/BfKdtYr5LogwgOUur/0na6VAFy+j7J7F10JuCa0j1Ll6rmkQB24wVM8OjTKERh6jbb81WMLrPpzhKsKjI2vs6n0R8bkwvjhgpC2fHto95UCtBTZTjp/K/6SgJJ/Lcy5qnehMnmML/oHKYYQMaexD3uLuaUkqVfFbgJpszIqgJ5TPSAZ5q8F9a8Y8KwLgU+m3Dp5
-# Termux
+# termux
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQfhfp2ngBSr6iKeWSI64tYQRDkKphn4PUqCqLMPnok
+# dropbear key
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4gFTMMlP7EYSV1XqbF20rpnQku9UOXuDHguhcn8lyqE7jQDew83SfhKAl/DjbsSA+5LUC1zJxMioPGBONYkCtZtJsdkRavx/45kP2VeBQbbSBcmfFY3XfG5vNtSmVIy/i4Vw79JI10hvbAro86hvOma/KdPwh+zum98coQ/mLuskxrQAU/DHyy3kNdUnf5aTJWE9QXqgN33M9QBb6O3QN8RIt9ODd4tXiUmxvFomsVy8C0IBHV5X0RPA0S1A6wGoVrPHKz4FwVxFNneqTTnMmlrN03pobLakWUbuVI/zN2NPiewyhSDvbbqykYs72DhcK4nv/Hlv+GbRBoQ25ZntCBwVg/Infs4n9WeYth6EIIiyksKj/BeATZBcTzjEVupsEu86TwQ4NAAc9VkTbSsvG80DGTDoqalywxBohFksQ5ku7kcbySHQS4jXoxCoSNNRiuSIxJknhg86h9HXEt7I3CdtITG+hsgcBSciYuZGPdXqlkR8hljtU56kiZY09OaM=
+# termius 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMHopXPCsReg6S0gYoILBIBSxxgMfxsY3mT8WINghvQf
 
 ### Retired keys ###
 # xps mint 
