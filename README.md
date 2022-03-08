@@ -39,18 +39,17 @@ bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/main/install_fra
 [main](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x026df53d6b7c0b00732d555cf8e3ef51cf4f4f51)
 # repo tree
 ```shell
-2 directories, 10 files
-.
-├── revoced_keyfiles
-│   ├── frank.perrakis.gpg001.asc
-│   ├── frank.perrakis.gpg002.asc
-│   ├── frank.perrakis.gpg003.v2-v3.asc
-│   └── frank.perrakis.yubikey.asc
-├── keyfiles
-│   └── frank.perrakis.main.asc
-├── install_frank.sh
-├── gpg-keys-urls
 ├── authorized_keys
-├── rsync_keys.sh
-└── README.md
+├── gpg-keys-urls
+├── install_frank.sh*
+├── keyfiles/
+│  ├── frank.perrakis.main.asc
+│  └── frank.perrakis.vagrant.asc
+├── README.md
+├── revoced_keyfiles/
+│  ├── frank.perrakis.gpg001.asc
+│  ├── frank.perrakis.gpg002.asc
+│  ├── frank.perrakis.gpg003.v2-v3.asc
+│  └── frank.perrakis.yubikey.asc
+└── rsync_keys.sh*
 ```
