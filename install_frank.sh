@@ -87,9 +87,9 @@ colorprintf orange "Running $pick_name"
 # declare dependencies
 declare -a dependencies=(curl wget gpg)
 # declare gpg key names from gitlab
-declare -a gpgKeyNames=(main)
+declare -a gpgKeyNames=(main vagrant)
 # declare gpg key names from ubuntu servers
-declare -a gpgKeyUbuntu=(0x1e7b5fe0ee3d960301366e161e81e951285219b0)
+declare -a gpgKeyUbuntu=(0x1e7b5fe0ee3d960301366e161e81e951285219b0 0x36a1e3206eaf6ae45d85f55f10c544ea15d3881d)
 
 while [ ! $# -eq 0 ]
 do
