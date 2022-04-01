@@ -6,7 +6,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDH2OTj6tomKgNXT8kyubEkt6SmNhy5C8j7iwQmWw0G
 
 ### Personal Keys ###
 # frank.perrakis@gmail.com
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBAErezIs54NgzfE8Gf0JPU7XP7PO6fpwa4qrx9aNuCV frank.perrakis@gmail.com
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBAErezIs54NgzfE8Gf0JPU7XP7PO6fpwa4qrx9aNuCV frank.perrakis
 # frankper
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJRt+8jIxva66x7Mw/iM3IPyP6I5zELgGNPvltGIqz1f frankper
 # frankperrakis
