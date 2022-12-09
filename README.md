@@ -41,15 +41,17 @@ bash <(curl -fsSL https://gitlab.com/frankper/public-keys/-/raw/main/install_fra
 ```shell
 ├── authorized_keys
 ├── gpg-keys-urls
-├── install_frank.sh*
+├── install_frank.sh
 ├── keyfiles/
-│  ├── frank.perrakis.main.asc
-│  └── frank.perrakis.vagrant.asc
+│  ├── frank.perrakis.datastax.pgp
+│  ├── frank.perrakis.main.2021.pgp
+│  ├── frank.perrakis.main.2022.pgp
+│  └── frank.perrakis.vagrant.pgp
 ├── README.md
 ├── revoced_keyfiles/
 │  ├── frank.perrakis.gpg001.asc
 │  ├── frank.perrakis.gpg002.asc
 │  ├── frank.perrakis.gpg003.v2-v3.asc
 │  └── frank.perrakis.yubikey.asc
-└── rsync_keys.sh*
+└── rsync_keys.sh
 ```
