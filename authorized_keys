@@ -1,8 +1,10 @@
 # for ssh access please add any or all of the main keys below
 
 ### Yubikeys/GPG-Cards ###
-# gpg-key-main
+# gpg-key-main-2021
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDH2OTj6tomKgNXT8kyubEkt6SmNhy5C8j7iwQmWw0GGxAMT6om+hrvp3C70KZS2zROesI3kzQloC5zM2bDuF57CaXri48vpn3aL3A2URuFXFhEJkoWgVoquZF9xKydmCOm/eTPaBF2+TNrJ+0m2VQoAsgdBcEiq+Pt2FmiG1igjJFluPJIDemvDWvV0wWD9GiW/uUflc7AsZN81A0KGEHaBBIxmdTlI58nFxGSQITzeQQWc5U7HAUAScCvEB0NOWs4vVOJU1GG1giLEG+1nup3fvdWtVffsnWxdSWdNa+FDsSetmN8rB3JoEDN7wDOBZTwsp2EOHTafWzRDsTkFEi/Lpvp/O5lcykmrXDOifbJYDLV8DNkut+XlBMtnOicpipD7ZeIgqNXvG7+Ai/Y4N5OzHdRbimtLgrpGWiy7AbXOhHX+0Nepdm1TXYm+9yHSEvk+gpcNqQ2bsNktdGTWItSWpBamWxw3JCYrQ+T3+PqojrcsBqTpj4N/wkqwrZNujZtBkrzQQNJDzE0rQV/dN7u/3MH8PxqzVOojzVKSEX45I8FEzKGLlui0uolzY6gbs4z17UBw4yLg68+txBYQgzIWPtkxFX4xLfT2GM1aRLozGaJzOCQqy529hD49ML8x4Cx6ZcT5s3CKxMMon/9tFxBxLjJkblhutMgQpb+zBeDXw== openpgp:0x78765BB2
+# gpg-key-main-2022
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKwAOgZjHbln0AURWeWMKR+V8F0q7+uZ3Y1VYgWOVrUB cardno:18298671
 
 ### Personal Keys ###
 # frank.perrakis@gmail.com
@@ -21,6 +23,8 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEHoJeN5jsHoVlAcykoHcKO9BFScXT9bdAzyYAEhVggi
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE6A71TCJC1uWAqDFNbM3nUfcSyujr/DWNUYN+Q5MY6u b
 # work ppl
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMFvls2fdrtSQvLs5IRPk4vRfssVIO1IRmEMoP/BS10B ppl
+# work dx
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF1C1RwgIsy0N3rCZNBnyYt0Mj7hfO69GeeBFcnDwmx/ dx
 
 ### github/gitlab ###
 # gh1

@@ -49,7 +49,7 @@ gpg_keys () {
   unset $key
   colorprintf red "Installing from gitlab"
   for key in ${gpgKeyNames[@]}; do 
-    curl -sSL https://gitlab.com/frankper/public-keys/-/raw/main/keyfiles/frank.perrakis.${key}.asc | gpg --import - 
+    curl -sSL https://gitlab.com/frankper/public-keys/-/raw/main/keyfiles/frank.perrakis.${key}.pgp | gpg --import - 
   done 
 }
 
@@ -87,9 +87,9 @@ colorprintf orange "Running $pick_name"
 # declare dependencies
 declare -a dependencies=(curl wget gpg)
 # declare gpg key names from gitlab
-declare -a gpgKeyNames=(main vagrant)
+declare -a gpgKeyNames=(main.2021 main.2022 datastax vagrant)
 # declare gpg key names from ubuntu servers
-declare -a gpgKeyUbuntu=(0x1e7b5fe0ee3d960301366e161e81e951285219b0 0x36a1e3206eaf6ae45d85f55f10c544ea15d3881d)
+declare -a gpgKeyUbuntu=(0x026df53d6b7c0b00732d555cf8e3ef51cf4f4f51 0xcd6c65decb8260756c086f8347435f093347b17d 0x36a1e3206eaf6ae45d85f55f10c544ea15d3881d  0xdf218f9c70d3cfb8711fbe54dfe3e78ade7e127b)
 
 while [ ! $# -eq 0 ]
 do
