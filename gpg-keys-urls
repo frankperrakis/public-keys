@@ -1,6 +1,12 @@
-# main
+# main 2021
 https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xF8E3EF51CF4F4F51
+# main 2022
+https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xdf218f9c70d3cfb8711fbe54dfe3e78ade7e127b
+# vagrant vm
 https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x36a1e3206eaf6ae45d85f55f10c544ea15d3881d
+# datastax
+https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcd6c65decb8260756c086f8347435f093347b17d
+
 # revoced
 # # gpg card 001 
 # https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x5faddad63d31b26a
